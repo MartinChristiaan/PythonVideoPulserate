@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>afa8ccf9-1320-46be-ac4e-7c7d44c40595</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>mat_exporter.py</StartupFile>
+    <StartupFile>rPPG_GUI.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,13 +25,10 @@
     <Compile Include="csk_facedetection.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="lukas_test.py" />
     <Compile Include="mat_exporter.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Object_tracking.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="rPPG_Extracter_denseflow.py" />
     <Compile Include="rPPG_lukas_Extracter.py" />
     <Compile Include="rPPG_Extracter.py" />
     <Compile Include="rPPG_GUI.py" />
@@ -39,9 +36,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="rPPG_processing_realtime.py" />
-    <Compile Include="rPPG_processing.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="util\func_util.py" />
     <Compile Include="util\opencv_util.py" />
     <Compile Include="util\pyqtgraph_util.py" />
@@ -56,6 +50,7 @@
   <ItemGroup>
     <Content Include="13kmh.mp4" />
     <Content Include="haarcascade_frontalface_default.xml" />
+    <Content Include="placeholder.png" />
     <Content Include="util\Border.png" />
     <Content Include="util\desktop.ini" />
     <Content Include="util\lines.html" />

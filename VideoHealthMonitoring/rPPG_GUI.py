@@ -14,8 +14,8 @@ class Settings():
         self.use_resampling = False # Set to true with webcam (also done automatically)
         
 # In the source either put the data path to the image sequence/video or "webcam"
-source = "C:\\Users\\marti\\Downloads\\Data\\stationary\\bmp\\"
-fs = 20 # Please change to the capture rate of the footage.
+source = "C:\\Users\\marti\\Downloads\\Data\\13kmh.mp4" # stationary\\bmp\\"
+fs = 24 # Please change to the capture rate of the footage.
 
 ############################## APP #######################################################
 
@@ -44,8 +44,7 @@ settings = Settings()
 
 
 def create_video_player():
-    vl = VideoLoader("C:\\Users\\marti\\Downloads\\Data\\stationary" + "\\bmp\\" )
-    frame,_,_ = vl.load_frame()
+    frame = cv2.imread("placeholder.png")
     vb = pg.GraphicsView()
     frame,_ = pg.makeARGB(frame,None,None,None,False)
     img = pg.ImageItem(frame,axisOrder = 'row-major')
