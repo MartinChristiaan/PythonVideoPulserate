@@ -17,11 +17,11 @@ For GUI:
 
 # GUI
 
-Execute the rPPG_GUI.py to launch the GUI. Edit the source variable in order to select the desired input. More user instructions can be found within the Python file.
+Execute the rPPG_GUI.py to launch the GUI. Edit the source variable in order to select the desired input. The GUI uses PyQtgraph in order to display measurent data in real time. The video source as well as de skin selection methods can be set within the python script.  Exact user instructions can be found within the Python file.  
 
 # .Mat Extraction
 
-The Raw rPPG signal from an offline recording can also be extracted to a .Mat file so it can be processed with Matlab. This is implemented in mat_exporter.py.
+The Raw rPPG signal from an offline recording can also be extracted to a .Mat file so it can be processed with Matlab, usefull for more detailed analysis. Run the mat_exporter.py for this functionality.
 
 # Other files
 rPPG_preprocessing.py contains some of the functions used for face tracking and skin classification.
