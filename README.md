@@ -12,8 +12,9 @@ It uses OpenCV for face detection, for skin selection two methods are available.
 * SciPy
 
 For GUI:
-* PyQT5
-* PyQTgraph
+* PyQt5
+* PyQtgraph
+
 
 # GUI
 
