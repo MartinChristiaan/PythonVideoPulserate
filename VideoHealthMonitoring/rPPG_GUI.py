@@ -8,14 +8,16 @@ class Settings():
         self.use_classifier = True  # Toggles skin classifier
         self.use_flow = False       # (Mixed_motion only) Toggles PPG detection 
                                     # with Lukas Kanade optical flow  
-        self.show_cropped = False   # Shows the processed frame on the aplication instead of the regular one.
-        self.sub_roi = []           # If instead of skin classifier, forhead estimation should be used
+        self.show_cropped = True    # Shows the processed frame on the aplication instead of the regular one.
+        self.sub_roi = []#          [.35,.65,.05,.15] # If instead of skin classifier, forhead estimation should be used
                                     # set to [.35,.65,.05,.15]
-        self.use_resampling = False # Set to true with webcam (also done automatically)
+        self.use_resampling = True  # Set to true with webcam 
         
 # In the source either put the data path to the image sequence/video or "webcam"
-source = "C:\\Users\\marti\\Downloads\\Data\\13kmh.mp4" # stationary\\bmp\\"
-fs = 24 # Please change to the capture rate of the footage.
+#source = "C:\\Users\\marti\\Downloads\\Data\\13kmh.mp4" # stationary\\bmp\\"
+#source = "C:\\Users\\marti\\Downloads\\Data\\stationary\\bmp\\"
+source = "webcam"
+fs = 20 # Please change to the capture rate of the footage.
 
 ############################## APP #######################################################
 
@@ -29,7 +31,6 @@ import numpy as np
 from util.func_util import *
 import matplotlib.cm as cm
 from util.style import style
-from types import FunctionType
 from util.opencv_util import *
 from rPPG_Extracter import *
 from rPPG_lukas_Extracter import *
@@ -105,7 +106,6 @@ def update(load_frame,rPPG_extracter,rPPG_extracter_lukas,settings : Settings):
             
         rPPG = np.transpose(rPPG_extracter_lukas.rPPG)
     else:
-        #rPPG_extracter.measure_rPPG_delta_saturated(frame)
         rPPG_extracter.measure_rPPG(frame,settings.use_classifier,settings.sub_roi) 
         rPPG = np.transpose(rPPG_extracter.rPPG)
     
