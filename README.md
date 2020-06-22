@@ -1,3 +1,5 @@
+updated version : https://github.com/MartinChristiaan/PythonVideoPulserateV2
+
 # Python Video Pulserate using the chrominance method
 Python implementation of a pulse rate monitor using rPPG from video with the chrominance method.
 It uses OpenCV for face detection, for skin selection two methods are available. Skin classification using a hsv color range and forehead estimation. Due to the state of the art chrominance method the system is fairly motion robust. Furthermore, this framework also features a GUI that depicts the measured raw rPPG signal and the resulting fourier spectrum. 
